@@ -3,7 +3,7 @@ require(['gitbook', 'jQuery'], function (gitbook, $) {
 	if (!window.history.pushState || !window.sessionStorage) return;
 
 	var KEY_SCROLL_POSITION = 'book_summary_scroll_postion_saver';
-	var $summary = $('.book-summary > .summary');
+	var $summary;
 
 	bindChangePushState(function() {
 		window.sessionStorage.setItem(KEY_SCROLL_POSITION, $summary.scrollTop())
@@ -12,7 +12,12 @@ require(['gitbook', 'jQuery'], function (gitbook, $) {
 	gitbook.events.bind('page.change', function () {
 		var savedScrollPosition
 			= Number(window.sessionStorage.getItem(KEY_SCROLL_POSITION), 10) || 0;
-		savedScrollPosition && $summary.scrollTop(savedScrollPosition);
+		
+		$summary = $('.book-summary > .summary');
+
+		window.setTimeout(function() {
+			$summary.scrollTop(savedScrollPosition);
+		}, 0);	
 	});
 
 	function bindChangePushState(cb) {
