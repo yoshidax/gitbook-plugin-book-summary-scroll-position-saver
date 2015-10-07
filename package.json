@@ -1,0 +1,21 @@
+{
+  "name": "gitbook-plugin-book-summary-scroll-position-saver",
+  "version": "0.0.1",
+  "description": "This plug-in to save the scroll position of book summary area of gitbook before the screen is changed, then restore it.",
+  "main": "index.js",
+  "scripts": {
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yoshidax/gitbook-plugin-book-summary-scroll-position-saver.git"
+  },
+  "keywords": [
+    "gitbook"
+  ],
+  "author": "yoshidax",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/yoshidax/gitbook-plugin-book-summary-scroll-position-saver/issues"
+  },
+  "homepage": "https://github.com/yoshidax/gitbook-plugin-book-summary-scroll-position-saver#readme"
+}
