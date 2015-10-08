@@ -17,7 +17,7 @@ require(['gitbook', 'jQuery'], function (gitbook, $) {
 
 		window.setTimeout(function() {
 			$summary.scrollTop(savedScrollPosition);
-		}, 0);	
+		}, 1);	
 	});
 
 	function bindChangePushState(cb) {
