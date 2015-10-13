@@ -13,7 +13,7 @@ require(['gitbook', 'jQuery'], function (gitbook, $) {
 		var savedScrollPosition
 			= Number(window.sessionStorage.getItem(KEY_SCROLL_POSITION), 10) || 0;
 		
-		$summary = $('.book-summary > .summary');
+		$summary = $('.book-summary .summary');
 
 		window.setTimeout(function() {
 			$summary.scrollTop(savedScrollPosition);
