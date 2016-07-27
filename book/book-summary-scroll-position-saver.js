@@ -6,6 +6,9 @@ require(['gitbook', 'jQuery'], function (gitbook, $) {
 	var $summary;
 
 	bindChangePushState(function() {
+		if (!$summary) {
+			return;
+		}
 		window.sessionStorage.setItem(KEY_SCROLL_POSITION, $summary.scrollTop())
 	});
 
